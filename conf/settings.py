@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-q_rb&lnxk%3uw)g&i-qu7(+f4i27=m@nlqy9y+ml=u1+-0-w9^
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+AUTH_USER_MODEL = 'user_app.User'
 
 # Application definition
 
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages',
+    'user_app',
 ]
 
 MIDDLEWARE = [
