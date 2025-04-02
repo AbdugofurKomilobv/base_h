@@ -7,6 +7,7 @@ from conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls', namespace='pages')),
+
 ]
 
 if settings.DEBUG:

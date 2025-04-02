@@ -30,6 +30,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     phone_number = models.CharField(max_length=15, unique=True)
     email = models.EmailField(unique=True)
     name = models.CharField(max_length=100)
+    
+
 
     is_admin = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
