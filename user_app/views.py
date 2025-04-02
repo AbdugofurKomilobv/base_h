@@ -1,8 +1,10 @@
 from django.contrib.auth import logout, authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.db.utils import IntegrityError
 
 from django.shortcuts import render, redirect
-from .models import User
+from .models import User,Message
+from .forms import MessageForm
 
 
 def register_page(request):
@@ -55,3 +57,4 @@ def login_page(request):
 def logout_view(request):
     logout(request)
     return redirect('pages:home')
+
