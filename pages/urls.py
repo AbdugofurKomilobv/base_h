@@ -7,6 +7,7 @@ from .views import *
 app_name = 'pages'
 
 urlpatterns = [
+    path('',testimpolse,name='home'),
     path('',home_page,name='home'),
     path('register/',register_page,name='register'),
     path('logout/', logout_view, name='logout'),

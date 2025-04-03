@@ -5,8 +5,15 @@ from django.http import JsonResponse
 from django.shortcuts import render, redirect
 
 from user_app.forms import MessageForm
-from user_app.models import User,Message
-from django.db.utils import IntegrityError
+from .models import Testimonials
+
+def testimpolse(request):
+    employes = Testimonials.objects.all()
+    db = {
+        'employes':employes
+    }
+
+    return render(request,'base.html',context=db)
 
 
 def home_page(request):
